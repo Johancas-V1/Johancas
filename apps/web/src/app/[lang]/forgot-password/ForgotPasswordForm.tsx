@@ -28,8 +28,8 @@ export default function ForgotPasswordForm({ dict, lang }: { dict: ForgotPasswor
     try {
       await api.auth.forgotPassword(email);
       setSent(true);
-    } catch {
-      setError(dict.error);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : dict.error);
     } finally {
       setLoading(false);
     }

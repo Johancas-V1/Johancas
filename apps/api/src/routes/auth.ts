@@ -70,8 +70,7 @@ router.post("/forgot-password", (req, res) => {
 
   const user = db.prepare("SELECT id, email FROM users WHERE email = ?").get(email) as Record<string, unknown> | undefined;
   if (!user) {
-    // Return success even if user not found (prevent email enumeration)
-    res.json({ message: "If the email exists, a reset link has been generated" });
+    res.status(404).json({ message: "No account found with that email" });
     return;
   }
 
