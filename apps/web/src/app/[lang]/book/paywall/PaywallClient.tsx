@@ -98,6 +98,13 @@ export default function PaywallClient({ dict, lang }: { dict: PaywallDict; lang:
             </Link>
           </p>
         )}
+
+        <Link
+          href={`/${lang}/books`}
+          className="inline-block mt-4 text-sm text-[var(--text-gray)] hover:text-[var(--navy-dark)] transition-colors"
+        >
+          &larr; {dict.browseBooks}
+        </Link>
       </div>
     </div>
   );
