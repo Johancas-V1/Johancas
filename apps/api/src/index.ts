@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { initSchema } from "./db/schema.js";
+import { autoSeed } from "./auto-seed.js";
 import authRoutes from "./routes/auth.js";
 import bookRoutes from "./routes/books.js";
 import userRoutes from "./routes/users.js";
@@ -10,11 +11,20 @@ import highlightRoutes from "./routes/highlights.js";
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Initialize DB schema
+// Initialize DB schema and seed if empty
 initSchema();
+autoSeed();
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"], credentials: true }));
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "http://localhost:3002",
+  "https://johancas.com",
+  "https://www.johancas.com",
+  "https://johancas-memos.vercel.app",
+];
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 
 // Routes
