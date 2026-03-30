@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: johancas-api
+    runtime: docker
+    dockerfilePath: ./apps/api/Dockerfile
+    dockerContext: ./apps/api
+    envVars:
+      - key: RESEND_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        value: https://johancas.com
+      - key: JWT_SECRET
+        sync: false
+      - key: PORT
+        value: "3001"
