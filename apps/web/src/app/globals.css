@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --navy-dark: #0B2545;
+  --navy-medium: #13315C;
+  --navy-light: #1B3A6B;
+  --blue-accent: #1565C0;
+  --bg-light: #E8EEF4;
+  --bg-white: #FFFFFF;
+  --text-white: #FFFFFF;
+  --text-dark: #0B2545;
+  --text-gray: #6B7B8D;
+  --text-muted: #9AA5B4;
+  --green-check: #4CAF50;
+  --border-light: #D0D8E0;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  .font-primary {
+    font-family: var(--font-inter), "Inter", sans-serif;
+  }
+}
