@@ -5,10 +5,12 @@
     "about": "À propos",
     "subscribe": "S'abonner",
     "createAccount": "Créer un compte",
-    "signIn": "Se connecter"
+    "signIn": "Se connecter",
+    "menu": "Menu",
+    "closeMenu": "Fermer"
   },
   "hero": {
-    "title": "Un Message Pour La Dernière Génération",
+    "title": "Événements mondiaux et eschatologie",
     "description": "Regardez chaque semaine et REJOIGNEZ des milliers d'abonnés, avec une perspective chrétienne approfondie sur les affaires mondiales, la compréhension de la prophétie biblique et la préparation au règne de 1000 ans de Jésus-Christ à venir.",
     "bullet1": "Prophétie Biblique",
     "bullet2": "Politique",
@@ -104,10 +106,16 @@
     "loading": "Chargement..."
   },
   "about": {
-    "title": "À propos de Johan Castellanos",
-    "bio": "Johan Castellanos est un auteur, conférencier et chercheur dévoué en prophétie biblique. Avec des années d'étude en eschatologie et en affaires mondiales, Johan apporte une perspective chrétienne unique pour comprendre les événements actuels à travers le prisme des Écritures. Son travail comble le fossé entre la prophétie biblique et la géopolitique moderne, aidant les lecteurs à se préparer spirituellement et intellectuellement pour les temps à venir.",
-    "missionTitle": "Notre Mission",
-    "missionText": "JCM (Johan Castellanos Memos) existe pour équiper les croyants et les chercheurs avec une analyse approfondie des événements mondiaux d'un point de vue biblique. À travers du contenu hebdomadaire, des livres et l'engagement communautaire, nous visons à favoriser la compréhension de la prophétie biblique, encourager la foi et préparer le corps du Christ pour le Royaume à venir.",
+    "title": "Comprendre les événements mondiaux à travers la prophétie biblique",
+    "paragraph1": "Le monde change à un rythme extraordinaire. Les bouleversements politiques, les crises économiques, les révolutions technologiques et les conflits géopolitiques transforment les nations et les sociétés. Mais si ces événements n'étaient pas des faits isolés ? Et s'ils faisaient partie d'une histoire plus vaste annoncée il y a des milliers d'années ?",
+    "paragraph2Before": "Je suis Johan Castellanos, et je crois que comprendre le présent exige d'examiner à la fois l'histoire et la prophétie biblique. À travers mon livre ",
+    "bookTitle": "La Grande Famine",
+    "paragraph2After": ", des articles et des vidéos, j'explore le croisement des événements mondiaux, de la géopolitique, de l'économie et de l'eschatologie.",
+    "purposeBefore": "Mon but n'est pas seulement de rapporter ce qui se passe, mais d'examiner ",
+    "purposeEmphasis": "pourquoi cela se produit, ce que l'Écriture en révèle, et quelles sont les conséquences d'ignorer les avertissements bibliques sur la fin des temps.",
+    "paragraph4": "En reliant les témoignages historiques, les événements contemporains et les enseignements bibliques, j'invite les lecteurs à regarder au-delà des titres et à considérer la signification spirituelle du temps dans lequel nous vivons.",
+    "siteAfterBefore": " est le site officiel du livre « ",
+    "siteAfterAfter": " ». Ce site a commencé en 2016 et il est accessible par abonnement tout à fait gratuitement.",
     "connectTitle": "Connecter"
   },
   "terms": {

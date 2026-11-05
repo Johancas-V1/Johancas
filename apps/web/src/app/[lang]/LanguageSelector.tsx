@@ -4,6 +4,10 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
+function persistLocale(code: string) {
+  document.cookie = `NEXT_LOCALE=${code};path=/;max-age=31536000`;
+}
+
 const languages = [
   { code: "en", label: "EN", flag: "🇺🇸" },
   { code: "es", label: "ES", flag: "🇪🇸" },
@@ -21,17 +25,17 @@ export default function LanguageSelector({ currentLang }: { currentLang: string 
   const pathname = usePathname();
 
   useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    function handleClick(event: MouseEvent) {
+      if (ref.current && !ref.current.contains(event.target as Node)) setOpen(false);
     }
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  const current = languages.find((l) => l.code === currentLang) ?? languages[0];
+  const current = languages.find((language) => language.code === currentLang) ?? languages[0];
 
   function switchLang(code: string) {
-    document.cookie = `NEXT_LOCALE=${code};path=/;max-age=31536000`;
+    persistLocale(code);
     const segments = pathname.split("/");
     segments[1] = code;
     router.push(segments.join("/"));
@@ -41,28 +45,38 @@ export default function LanguageSelector({ currentLang }: { currentLang: string 
   return (
     <div ref={ref} className="relative">
       <button
+        type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-md border border-[var(--border-light)] text-[13px] font-medium text-[var(--text-dark)] hover:bg-gray-50 transition-colors"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        className="flex items-center gap-1.5 rounded-buttons border border-ink-black bg-parchment px-3 py-1.5 font-editorial-new text-[14px] font-light tracking-caption text-ink-black hover:bg-bone-cream"
       >
-        <span>{current.flag}</span>
+        <span aria-hidden="true">{current.flag}</span>
         {current.label}
-        <ChevronDown className={`w-3.5 h-3.5 text-[var(--text-gray)] transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown className={`h-3.5 w-3.5 text-ink-black transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 bg-white/95 backdrop-blur-sm rounded-lg shadow-[0_6px_20px_rgba(0,0,0,0.1)] border border-[var(--border-light)] py-2 px-3 z-50 min-w-[90px]">
-          {languages.map((lang) => (
+        <div
+          role="listbox"
+          aria-label={current.label}
+          className="absolute right-0 top-full z-50 mt-1 min-w-[108px] rounded-buttons border border-ink-black bg-bone-cream py-1"
+        >
+          {languages.map((language) => (
             <button
-              key={lang.code}
-              onClick={() => switchLang(lang.code)}
-              className={`flex items-center gap-2 w-full px-2 py-1.5 rounded text-[13px] font-medium transition-colors ${
-                lang.code === currentLang
-                  ? "text-[var(--navy-dark)] bg-[var(--bg-light)]"
-                  : "text-[var(--text-gray)] hover:text-[var(--text-dark)] hover:bg-gray-50"
+              key={language.code}
+              type="button"
+              role="option"
+              aria-selected={language.code === currentLang}
+              onClick={() => switchLang(language.code)}
+              className={`flex w-full items-center gap-2 px-3 py-1.5 text-left font-editorial-new text-[14px] font-light tracking-caption ${
+                language.code === currentLang
+                  ? "bg-parchment text-ink-black"
+                  : "text-charcoal hover:bg-parchment hover:text-ink-black"
               }`}
             >
-              <span className="text-base">{lang.flag}</span>
-              {lang.label}
+              <span aria-hidden="true">{language.flag}</span>
+              {language.label}
             </button>
           ))}
         </div>

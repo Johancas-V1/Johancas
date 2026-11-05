@@ -16,34 +16,46 @@ interface FooterDict {
 
 export default function SharedFooter({ dict, lang }: { dict: FooterDict; lang: string }) {
   return (
-    <footer className="bg-[var(--navy-dark)] px-6 md:px-16 py-10 flex flex-col gap-8">
-      <div className="max-w-6xl mx-auto w-full flex flex-wrap justify-between gap-8">
-        <div className="flex flex-col gap-3">
-          <h4 className="text-[16px] font-bold text-white">{dict.books}</h4>
-          <Link href={`/${lang}/books/the-great-famine`} className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">{dict.bookTitle1}</Link>
-          <Link href={`/${lang}/books/clay-and-iron`} className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">{dict.bookTitle2}</Link>
+    <footer className="border-t border-ink-black bg-parchment text-ink-black">
+      <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-5 py-12 md:grid-cols-[minmax(0,1.4fr)_auto] md:px-10 md:py-14">
+        <div className="grid gap-8 sm:grid-cols-3">
+          <div className="flex flex-col items-start gap-3">
+            <h2 className="font-editorial-new text-[16px] font-light tracking-[-0.02em]">{dict.books}</h2>
+            <Link href={`/${lang}/books/the-great-famine`} className="editorial-link text-[16px]">
+              {dict.bookTitle1}
+            </Link>
+            <Link href={`/${lang}/books/clay-and-iron`} className="editorial-link text-[16px]">
+              {dict.bookTitle2}
+            </Link>
+          </div>
+          <div className="flex flex-col items-start gap-3">
+            <h2 className="font-editorial-new text-[16px] font-light tracking-[-0.02em]">{dict.resources}</h2>
+            <Link href={`/${lang}#blog`} className="editorial-link text-[16px]">
+              {dict.blogs}
+            </Link>
+          </div>
+          <div className="flex flex-col items-start gap-3">
+            <h2 className="font-editorial-new text-[16px] font-light tracking-[-0.02em]">{dict.jcm}</h2>
+            <Link href={`/${lang}/terms`} className="editorial-link text-[16px]">
+              {dict.tc}
+            </Link>
+            <Link href={`/${lang}/privacy`} className="editorial-link text-[16px]">
+              {dict.privacy}
+            </Link>
+            <Link href={`/${lang}/about`} className="editorial-link text-[16px]">
+              {dict.about}
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-3">
-          <h4 className="text-[16px] font-bold text-white">{dict.resources}</h4>
-          <Link href={`/${lang}#blog`} className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">{dict.blogs}</Link>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h4 className="text-[16px] font-bold text-white">{dict.jcm}</h4>
-          <Link href={`/${lang}/terms`} className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">{dict.tc}</Link>
-          <Link href={`/${lang}/privacy`} className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">{dict.privacy}</Link>
-          <Link href={`/${lang}/about`} className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">{dict.about}</Link>
-        </div>
-      </div>
 
-      <div className="max-w-6xl mx-auto w-full h-px bg-white/10" />
-
-      <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
-        <div className="flex items-center gap-5">
-          <SocialIcons size="w-5 h-5" />
+        <div className="flex flex-col items-start gap-5 md:items-end md:justify-between">
+          <div className="flex items-center gap-5 text-ink-black" aria-hidden="true">
+            <SocialIcons className="h-5 w-5" />
+          </div>
+          <button type="button" className="ink-button h-12 px-6 text-[16px]">
+            {dict.buyOnAmazon}
+          </button>
         </div>
-        <button className="bg-[var(--blue-accent)] text-white text-[15px] font-bold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity">
-          {dict.buyOnAmazon}
-        </button>
       </div>
     </footer>
   );

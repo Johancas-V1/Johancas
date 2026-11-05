@@ -5,10 +5,12 @@
     "about": "Sobre",
     "subscribe": "Inscrever-se",
     "createAccount": "Criar Conta",
-    "signIn": "Entrar"
+    "signIn": "Entrar",
+    "menu": "Menu",
+    "closeMenu": "Fechar"
   },
   "hero": {
-    "title": "Uma Mensagem Para A Última Geração",
+    "title": "Eventos globais e escatologia",
     "description": "Assista semanalmente e JUNTE-SE a milhares de assinantes, com uma perspectiva cristã aprofundada sobre assuntos mundiais, compreendendo a profecia bíblica e se preparando para o próximo reinado de 1000 anos de Jesus Cristo.",
     "bullet1": "Profecia Bíblica",
     "bullet2": "Política",
@@ -104,10 +106,16 @@
     "loading": "Carregando..."
   },
   "about": {
-    "title": "Sobre Johan Castellanos",
-    "bio": "Johan Castellanos é um autor, palestrante e pesquisador dedicado de profecia bíblica. Com anos de estudo em escatologia e assuntos mundiais, Johan traz uma perspectiva cristã única para a compreensão dos eventos atuais através das lentes das Escrituras. Seu trabalho preenche a lacuna entre a profecia bíblica e a geopolítica moderna, ajudando os leitores a se prepararem espiritual e intelectualmente para os tempos vindouros.",
-    "missionTitle": "Nossa Missão",
-    "missionText": "JCM (Johan Castellanos Memos) existe para equipar crentes e buscadores com análises aprofundadas dos eventos mundiais a partir de uma perspectiva bíblica. Através de conteúdo semanal, livros e engajamento comunitário, buscamos promover a compreensão da profecia bíblica, encorajar a fé e preparar o corpo de Cristo para o Reino vindouro.",
+    "title": "Compreender os acontecimentos mundiais através da profecia bíblica",
+    "paragraph1": "O mundo está mudando em um ritmo extraordinário. Convulsões políticas, crises econômicas, revoluções tecnológicas e conflitos geopolíticos estão remodelando nações e sociedades. Mas e se esses acontecimentos não forem fatos isolados? E se fizerem parte de uma história maior anunciada há milhares de anos?",
+    "paragraph2Before": "Sou Johan Castellanos, e acredito que compreender o presente exige examinar tanto a história quanto a profecia bíblica. Por meio do meu livro ",
+    "bookTitle": "A Grande Fome",
+    "paragraph2After": ", de artigos e de vídeos, exploro o encontro entre acontecimentos mundiais, geopolítica, economia e escatologia.",
+    "purposeBefore": "Meu propósito não é apenas relatar o que está acontecendo, mas investigar ",
+    "purposeEmphasis": "por que isso está acontecendo, o que as Escrituras revelam a respeito e quais são as consequências de ignorar os avisos bíblicos sobre os últimos tempos.",
+    "paragraph4": "Ao ligar evidências históricas, acontecimentos contemporâneos e ensinamentos bíblicos, convido os leitores a olhar além das manchetes e a considerar o significado espiritual do tempo em que vivemos.",
+    "siteAfterBefore": " é o site oficial do livro \"",
+    "siteAfterAfter": "\". Este site começou em 2016 e está disponível por assinatura totalmente gratuita.",
     "connectTitle": "Conectar"
   },
   "terms": {
