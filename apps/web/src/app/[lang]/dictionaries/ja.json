@@ -5,7 +5,9 @@
     "about": "概要",
     "subscribe": "購読",
     "createAccount": "アカウント作成",
-    "signIn": "ログイン"
+    "signIn": "ログイン",
+    "menu": "メニュー",
+    "closeMenu": "閉じる"
   },
   "hero": {
     "title": "最後の世代へのメッセージ",

@@ -1,26 +1,195 @@
 @import "tailwindcss";
 
+/*
+  Miranda broadsheet tokens.
+  Licensed faces (Editorial New, Canopee, Domaine Display, Germgoth) are
+  substituted with Source Serif 4, Bodoni Moda, Playfair Display, and Pirata One.
+  Serif fallbacks only — no grotesque stack.
+
+  Spacing numbers that collide with Tailwind's multiplier scale (4, 7, 10…)
+  live as custom properties, not @theme keys, so utilities such as p-4 stay
+  on the default scale. Use var(--spacing-43) or the non-colliding keys.
+  --radius-sm / --shadow-sm are likewise left alone so inner pages keep
+  their existing rounded-* and shadow-* utilities.
+*/
+
+@theme {
+  --color-parchment: #e2dedb;
+  --color-bone-cream: #cdc6be;
+  --color-ink-black: #1d1d1b;
+  --color-charcoal: #69645f;
+  --color-pure-black: #000000;
+  --color-ember-orange: #c03f13;
+
+  --font-sans: var(--font-source-serif), "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, "Noto Serif", serif;
+  --font-editorial-new: var(--font-source-serif), "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, "Noto Serif", serif;
+  --font-canopee: var(--font-bodoni), "Bodoni Moda", Didot, "Bodoni MT", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-domaine-display: var(--font-playfair), "Playfair Display", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-germgoth: var(--font-pirata), "Pirata One", "IM Fell English", Palatino, Georgia, serif;
+
+  --text-caption: 14px;
+  --text-caption--line-height: 1.18;
+  --text-body-sm: 16px;
+  --text-body-sm--line-height: 1.27;
+  --text-subheading: 22px;
+  --text-subheading--line-height: 1.18;
+  --text-heading-sm: 32px;
+  --text-heading-sm--line-height: 1.11;
+  --text-heading: 65px;
+  --text-heading--line-height: 0.91;
+  --text-heading-lg: 122px;
+  --text-heading-lg--line-height: 0.79;
+  --text-display: 446px;
+  --text-display--line-height: 0.73;
+
+  --tracking-caption: -0.27px;
+  --tracking-body-sm: -0.16px;
+  --tracking-subheading: -0.55px;
+  --tracking-heading-sm: -0.96px;
+  --tracking-heading: -2.08px;
+  --tracking-heading-lg: -4.88px;
+  --tracking-display: -22.3px;
+
+  --leading-caption: 1.18;
+  --leading-body-sm: 1.27;
+  --leading-subheading: 1.18;
+  --leading-heading-sm: 1.11;
+  --leading-heading: 0.91;
+  --leading-heading-lg: 0.79;
+  --leading-display: 0.73;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  --radius-tags: 2.88px;
+  --radius-cards: 11.52px;
+  --radius-images: 0px;
+  --radius-buttons: 2.88px;
+
+  --shadow-sheet: rgba(29, 29, 27, 0.2) -4px 4px 6px 0px;
+  --shadow-portrait: rgba(29, 29, 27, 0.2) -5px 3px 6px 0px;
+}
+
 :root {
-  --navy-dark: #0B2545;
-  --navy-medium: #13315C;
-  --navy-light: #1B3A6B;
-  --blue-accent: #1565C0;
-  --bg-light: #E8EEF4;
-  --bg-white: #FFFFFF;
-  --text-white: #FFFFFF;
-  --text-dark: #0B2545;
-  --text-gray: #6B7B8D;
-  --text-muted: #9AA5B4;
-  --green-check: #4CAF50;
-  --border-light: #D0D8E0;
+  --color-parchment: #e2dedb;
+  --color-bone-cream: #cdc6be;
+  --color-ink-black: #1d1d1b;
+  --color-charcoal: #69645f;
+  --color-pure-black: #000000;
+  --color-ember-orange: #c03f13;
+
+  --surface-parchment: #e2dedb;
+  --surface-bone-cream: #cdc6be;
+  --surface-ink-black: #1d1d1b;
+  --surface-pure-black: #000000;
+
+  --spacing-unit: 4px;
+  --spacing-4: 4px;
+  --spacing-7: 7px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-14: 14px;
+  --spacing-17: 17px;
+  --spacing-22: 22px;
+  --spacing-28: 28px;
+  --spacing-29: 29px;
+  --spacing-36: 36px;
+  --spacing-43: 43px;
+  --spacing-58: 58px;
+  --spacing-65: 65px;
+  --spacing-115: 115px;
+
+  --page-max-width: 1440px;
+  --section-gap: 43px;
+  --card-padding: 24px;
+  --element-gap: 14px;
+
+  /* Legacy names kept so inner pages follow the ink/parchment palette. */
+  --navy-dark: #1d1d1b;
+  --navy-medium: #1d1d1b;
+  --navy-light: #69645f;
+  --blue-accent: #1d1d1b;
+  --bg-light: #e2dedb;
+  --bg-white: #cdc6be;
+  --text-white: #e2dedb;
+  --text-dark: #1d1d1b;
+  --text-gray: #69645f;
+  --text-muted: #69645f;
+  --green-check: #1d1d1b;
+  --border-light: #69645f;
 }
 
 @layer base {
-  html, body {
+  html {
     height: 100%;
+    color-scheme: light;
+    background: var(--color-parchment);
   }
 
-  .font-primary {
-    font-family: var(--font-inter), "Inter", sans-serif;
+  body {
+    min-height: 100%;
+    background: var(--color-parchment);
+    color: var(--color-ink-black);
+    font-family: var(--font-editorial-new), "Iowan Old Style", Palatino, Georgia, serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.27;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-ink-black);
+    color: var(--color-parchment);
+  }
+}
+
+@layer components {
+  .editorial-link {
+    color: var(--color-ink-black);
+    font-weight: 300;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .editorial-link:hover {
+    color: var(--color-pure-black);
+  }
+
+  .editorial-link:focus-visible {
+    outline: 1px solid var(--color-ink-black);
+    outline-offset: 3px;
+  }
+
+  .ink-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-buttons);
+    background: var(--color-ink-black);
+    color: var(--color-parchment);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .ink-button:hover {
+    background: var(--color-pure-black);
+  }
+
+  .ink-button:focus-visible {
+    outline: 1px solid var(--color-ink-black);
+    outline-offset: 3px;
+  }
+
+  .drop-cap::first-letter {
+    float: left;
+    margin: 0.06em 0.12em 0 0;
+    font-family: var(--font-canopee), "Bodoni Moda", Didot, Georgia, serif;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--color-ink-black);
   }
 }

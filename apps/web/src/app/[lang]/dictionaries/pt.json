@@ -5,7 +5,9 @@
     "about": "Sobre",
     "subscribe": "Inscrever-se",
     "createAccount": "Criar Conta",
-    "signIn": "Entrar"
+    "signIn": "Entrar",
+    "menu": "Menu",
+    "closeMenu": "Fechar"
   },
   "hero": {
     "title": "Uma Mensagem Para A Última Geração",

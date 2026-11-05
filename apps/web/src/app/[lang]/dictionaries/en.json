@@ -5,7 +5,9 @@
     "about": "About",
     "subscribe": "Subscribe",
     "createAccount": "Create Account",
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "menu": "Menu",
+    "closeMenu": "Close"
   },
   "hero": {
     "title": "A Message To The Last Generation",

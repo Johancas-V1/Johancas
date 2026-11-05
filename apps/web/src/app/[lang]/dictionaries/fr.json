@@ -5,7 +5,9 @@
     "about": "À propos",
     "subscribe": "S'abonner",
     "createAccount": "Créer un compte",
-    "signIn": "Se connecter"
+    "signIn": "Se connecter",
+    "menu": "Menu",
+    "closeMenu": "Fermer"
   },
   "hero": {
     "title": "Un Message Pour La Dernière Génération",
