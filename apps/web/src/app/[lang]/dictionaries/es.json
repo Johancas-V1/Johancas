@@ -10,7 +10,7 @@
     "closeMenu": "Cerrar"
   },
   "hero": {
-    "title": "Un Mensaje Para La Última Generación",
+    "title": "Acontecimientos mundiales y escatología",
     "description": "Mira semanalmente y ÚNETE a miles de suscriptores, con una perspectiva cristiana profunda sobre los asuntos mundiales, entendiendo la profecía bíblica y preparándose para el próximo reinado de 1000 años de Jesucristo.",
     "bullet1": "Profecía Bíblica",
     "bullet2": "Política",
@@ -106,10 +106,16 @@
     "loading": "Cargando..."
   },
   "about": {
-    "title": "Acerca de Johan Castellanos",
-    "bio": "Johan Castellanos es un autor, orador e investigador dedicado de la profecía bíblica. Con años de estudio en escatología y asuntos mundiales, Johan aporta una perspectiva cristiana única para comprender los eventos actuales a través del lente de las Escrituras. Su trabajo cierra la brecha entre la profecía bíblica y la geopolítica moderna, ayudando a los lectores a prepararse espiritual e intelectualmente para los tiempos venideros.",
-    "missionTitle": "Nuestra Misión",
-    "missionText": "JCM (Johan Castellanos Memos) existe para equipar a creyentes y buscadores con un análisis profundo de los eventos mundiales desde una perspectiva bíblica. A través de contenido semanal, libros y participación comunitaria, buscamos fomentar la comprensión de la profecía bíblica, alentar la fe y preparar al cuerpo de Cristo para el Reino venidero.",
+    "title": "Comprender los acontecimientos mundiales a través de la profecía bíblica",
+    "paragraph1": "El mundo cambia a un ritmo extraordinario. Las convulsiones políticas, las crisis económicas, las revoluciones tecnológicas y los conflictos geopolíticos están transformando naciones y sociedades. Pero ¿y si estos acontecimientos no son hechos aislados? ¿Y si forman parte de una historia mayor anunciada hace miles de años?",
+    "paragraph2Before": "Soy Johan Castellanos, y creo que comprender el presente exige examinar tanto la historia como la profecía bíblica. A través de mi libro ",
+    "bookTitle": "La Gran Hambruna",
+    "paragraph2After": ", artículos y videos, exploro el cruce entre los acontecimientos mundiales, la geopolítica, la economía y la escatología.",
+    "purposeBefore": "Mi propósito no es solo informar de lo que ocurre, sino investigar ",
+    "purposeEmphasis": "por qué está ocurriendo, qué revela la Escritura al respecto y cuáles son las consecuencias de ignorar las advertencias bíblicas sobre los últimos tiempos.",
+    "paragraph4": "Al unir la evidencia histórica, los acontecimientos contemporáneos y las enseñanzas bíblicas, invito a los lectores a mirar más allá de los titulares y a considerar el significado espiritual del tiempo en que vivimos.",
+    "siteAfterBefore": " es el sitio oficial del libro, \"",
+    "siteAfterAfter": "\". Este sitio comenzó en 2016 y está disponible por suscripción totalmente gratis.",
     "connectTitle": "Conectar"
   },
   "terms": {

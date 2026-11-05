@@ -6,6 +6,7 @@ import AuthProviderWrapper from "./AuthProviderWrapper";
 const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
   subsets: ["latin", "latin-ext", "cyrillic"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 

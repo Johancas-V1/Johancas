@@ -10,7 +10,7 @@
     "closeMenu": "Close"
   },
   "hero": {
-    "title": "A Message To The Last Generation",
+    "title": "Global events and eschatology",
     "description": "Watch weekly and JOIN thousands of subscribers, with in-depth Christian perspective on world affairs, understanding Bible prophecy and preparing for the upcoming 1000 year reign of Jesus Christ.",
     "bullet1": "Bible Prophecy",
     "bullet2": "Politics",
@@ -141,10 +141,16 @@
     "noHighlights": "No highlights yet. Select text to create one."
   },
   "about": {
-    "title": "About Johan Castellanos",
-    "bio": "Johan Castellanos is a dedicated author, speaker, and Bible prophecy researcher. With years of study in eschatology and world affairs, Johan brings a unique Christian perspective to understanding current events through the lens of Scripture. His work bridges the gap between biblical prophecy and modern geopolitics, helping readers prepare spiritually and intellectually for the times ahead.",
-    "missionTitle": "Our Mission",
-    "missionText": "JCM (Johan Castellanos Memos) exists to equip believers and seekers with in-depth analysis of world events from a biblical perspective. Through weekly content, books, and community engagement, we aim to foster understanding of Bible prophecy, encourage faith, and prepare the body of Christ for the coming Kingdom.",
+    "title": "Understanding World Events Through Biblical Prophecy",
+    "paragraph1": "The world is changing at an extraordinary pace. Political upheavals, economic crises, technological revolutions, and geopolitical conflicts are reshaping nations and societies. But what if these events are not isolated developments? What if they are part of a greater story foretold thousands of years ago?",
+    "paragraph2Before": "I'm Johan Castellanos, and I believe that understanding the present requires examining both history and biblical prophecy. Through my book ",
+    "bookTitle": "The Great Famine",
+    "paragraph2After": ", articles, and videos, I explore the intersection of global events, geopolitics, economics, and eschatology.",
+    "purposeBefore": "My purpose is not merely to report what is happening, but to investigate ",
+    "purposeEmphasis": "why it is happening, what Scripture reveals about it, and what are the consequences of ignoring biblical warnings about the end times.",
+    "paragraph4": "By connecting historical evidence, contemporary events, and biblical teachings, I invite readers to look beyond the headlines and consider the spiritual significance of the times in which we live.",
+    "siteAfterBefore": " is the official website of book, \"",
+    "siteAfterAfter": "\". This website started in 2016 and it is available by subscription absolutely free.",
     "connectTitle": "Connect"
   },
   "terms": {
